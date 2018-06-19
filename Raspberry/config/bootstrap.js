@@ -8,12 +8,29 @@
  * For more information on bootstrapping your app, check out:
  * https://sailsjs.com/config/bootstrap
  */
-
+const request = require('request');//importar modulos en nodejs
 module.exports.bootstrap = async function(done) {
 
-  setInterval(
-    ()=>{
-        console.log('Hola mundo');
-      },10000);
+          setInterval(
+            () => {
+            console.log('Enviar datos');
+
+          const objetoRequest = {
+            url: 'http://localhost:1338/Usuario',
+            form: {
+              nombre: 'Andres',
+              apellido: 'Salazar'
+            }
+          };
+          request
+            .post(objetoRequest,
+              (err, respuesta, body) => {
+            console.log('err', err);
+          console.log('respuesta', respuesta);
+          console.log('body', body);
+
+        })
+        }
+        , 10000);
   return done();
 };
