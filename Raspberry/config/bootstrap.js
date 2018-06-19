@@ -16,10 +16,10 @@ module.exports.bootstrap = async function(done) {
             console.log('Enviar datos');
 
           const objetoRequest = {
-            url: 'http://localhost:1338/Usuario',
+            url: 'http://localhost:1338/Pulsacion',
             form: {
-              nombre: 'Andres',
-              apellido: 'Salazar'
+              nombreRaspberry: 'Lolita',
+              usuarioIdFK: 16
             }
           };
           request

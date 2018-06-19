@@ -9,8 +9,11 @@ module.exports = {
 
   attributes: {
     nombreRaspberry:{
-      type: string,
+      type: 'string',
       required: true
+    },
+    usuarioIdFK: {
+      model: 'Usuario'
     }
   },
 

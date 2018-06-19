@@ -9,13 +9,17 @@ module.exports = {
 
   attributes: {
     nombre:{
-      type: string,
+      type: 'string',
       required: true
     },
     apellido:{
-      type: string,
+      type: 'string',
       required: true
     },
+    pulsaciones:{
+      collection: 'Pulsacion',
+      via: 'usuarioIdFK'
+    }
 
   },
 
